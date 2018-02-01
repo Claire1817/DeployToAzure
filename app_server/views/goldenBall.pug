@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= 'Winner of the Golder Ball since 2011'
+    ul
+        each winner in winnersPlayer
+            li= winner.year + ':' + winner.player
