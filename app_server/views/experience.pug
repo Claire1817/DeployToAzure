@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= 'All my professional experience'
+    ul
+        each experience in experienceListObj
+            li= experience.year + ' : ' + experience.title

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1= 'My Skills'
+    ul
+        each skill in skillListObj
+            li= skill.type + ' : ' + skill.details
