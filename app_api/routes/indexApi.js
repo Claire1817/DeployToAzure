@@ -8,13 +8,13 @@ const skillController = require('../controllers/skillsController');
 router
     .route('/contact')
     .get(contactController.getContactSchemas)
-    .post(contactController.postContactSchemas);
+    .post(contactController.postContactSchemas)
 
 
 router
     .route('/experience')
     .get(experienceController.getExperienceSchemas)
-    .post(experienceController.postExperienceSchemas);
+    .post(experienceController.postExperienceSchemas)
 
 
 router

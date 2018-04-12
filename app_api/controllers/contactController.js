@@ -19,6 +19,7 @@ const postContactSchemas = function (req, res) {
             res.status(500).json({'status' : 'error in mongo'});
         }
         else {
+            console.log(post);
             res.status(200).json({'status' : 'ok', 'data' : post});
         }
     });

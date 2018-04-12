@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var ctrlMain = require('../../controllers/main');
-var ctrlContact = require('../../controllers/ctrlContact');
-var ctrlExperience = require('../../controllers/ctrlExperience');
-var ctrlSkill = require('../../controllers/ctrlSkill');
-var ctrlAbout = require('../../controllers/ctrlAbout');
+var ctrlMain = require('../controllers/main');
+var ctrlContact = require('../controllers/ctrlContact');
+var ctrlExperience = require('../controllers/ctrlExperience');
+var ctrlSkill = require('../controllers/ctrlSkill');
+var ctrlAbout = require('../controllers/ctrlAbout');
 
 /* GET home page. */
 router.get('/', ctrlMain.index);

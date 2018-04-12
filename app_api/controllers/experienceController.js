@@ -14,11 +14,13 @@ const getExperienceSchemas = function(req, res) {
 
 //POST activity
 const postExperienceSchemas = function (req, res) {
+    console.log(req);
     experienceSchema.create(req.body, function(err, post) {
         if (err) {
             res.status(500).json({'status' : 'error in mongo'});
         }
         else {
+            console.log(post);
             res.status(200).json({'status' : 'ok', 'data' : post});
         }
     });
