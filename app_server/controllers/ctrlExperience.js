@@ -28,6 +28,38 @@ const experienceList = function (req, res) {
     );
 };
 
+const showForm = function (req, res) {
+  res.render('experience_add');
+};
+
+const addData = function (req, res) {
+    const path = '/api/experience';
+
+    const postdata = {
+        year : req.body.year,
+        title : req.body.title
+    };
+
+    const requestOptions = {
+        url : apiURL.server + path,
+        method: 'POST',
+        json: postdata
+    };
+
+    request(
+        requestOptions,
+        function (err, response, body) {
+            if (response.statusCode === 200) {
+                res.redirect('/Experience');
+            } else {
+                res.render('error', {message : 'Error adding data' + response.statusMessage + '( ' + response.statusCode + ' )'});
+            }
+        }
+    );
+};
+
 module.exports= {
-    experienceList
+    experienceList,
+    showForm,
+    addData
 };

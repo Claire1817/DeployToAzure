@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .row
+        h4 New profesionnal experience
+    form(action="", method="post")
+        .form-group.row
+            label Year
+                input.form-control(name="year")
+        .form-group.row
+            label title
+                input.form-control(name="title")
+        .form-group.row
+            button.btn-primary Add

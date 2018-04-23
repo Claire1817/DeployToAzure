@@ -14,4 +14,9 @@ router.get('/Experience', ctrlExperience.experienceList);
 router.get('/Skill', ctrlSkill.skillList);
 router.get('/About', ctrlAbout.aboutList);
 
+router
+    .route('/Experience/add')
+    .get(ctrlExperience.showForm)
+    .post(ctrlExperience.addData);
+
 module.exports = router;
